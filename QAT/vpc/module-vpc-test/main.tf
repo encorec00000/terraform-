@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 module "tf_vpc" {
-  source = "../../../modules/vpc"
+  source = "git::https://github.com/encorec00000/terraform-.git//modules/vpc?ref=1.0.0"
 
 ### VCP配置 ###
 
