@@ -7,7 +7,7 @@ output "created_users" {
 }
 
 output "created_access_keys" {
-  value = values(aws_iam_user._access_key)[*]
+  value = values(aws_iam_access_key._access_key)[*]
 }
 
 output "created_policies" {
