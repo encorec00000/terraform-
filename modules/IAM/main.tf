@@ -54,4 +54,10 @@ resource "aws_iam_access_key" "_access_key" {
   for_each  = var.users
   user      = each.key
   pgp_key   = var.pgp_key
+  
+  depends_on = [
+    aws_iam_group._groups,
+    aws_iam_user._users,
+    aws_iam_policy._policies,
+  ]
 }
